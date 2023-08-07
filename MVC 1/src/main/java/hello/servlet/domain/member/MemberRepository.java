@@ -35,6 +35,7 @@ public class MemberRepository {
 
     public List<Member> findAll() {
         return new ArrayList<>(store.values()); // 이렇게 하는 이유는 store에 있는 값을 건드리고 싶지 않아서 ArrayList를 통해서 조회
+        //핵심은 new 로 새롭게 생성한 arraylist를 반환하기 때문에 반환된 arraylist를 조작한다고 해도 store의 데이터는 영향을 받지 않는다.
     }
 
     public void clearStore() {
