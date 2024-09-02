@@ -22,7 +22,7 @@ public class MemberListServlet extends HttpServlet {
 
         List<Member> members = memberRepository.findAll();
 
-        resp.setContentType("text/hrml");
+        resp.setContentType("text/html");
         resp.setCharacterEncoding("utf-8");
 
         PrintWriter w = resp.getWriter();
